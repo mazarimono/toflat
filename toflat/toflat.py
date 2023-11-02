@@ -3,7 +3,7 @@ import pkg_resources
 from dataclasses import dataclass
 
 FLAT_FILE = pkg_resources.resource_filename(
-    'data/jgd2011_plane_rect_crs.geojson'
+    'toflat', 'data/jgd2011_plane_rect_crs.geojson'
 )
 
 @dataclass
@@ -40,3 +40,12 @@ class ToFlat:
         return flat_df
     
 
+if __name__ == '__main__':
+    import sys
+    sys.path.append('..')
+    test_data_path = 'toflat/data/P34-14_01_GML.zip'
+    d = gpd.read_file(test_data_path, encoding='cp932')
+    tf = ToFlat(d)
+    tf_d = tf.to_flat()
+    print(tf_d)
+    print(tf_d.crs)

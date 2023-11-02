@@ -10,7 +10,7 @@ authors = [{name = "HideyukiO", email="hogawa098@gmail.com"}]
 readme = "README.md"
 requires-python = ">=3.10"
 license = { text = "MIT License" }
-keyword = ["plane_rectangle", "GIS"]
+keywords = ["plane_rectangle", "GIS"]
 classifiers = [
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.10",
