@@ -27,7 +27,8 @@ class ToFlat:
 
     @property
     def flat_epsg(self) -> str:
-        union = self.gdf['geometry'].unary_union
+        data = self.gdf.to_crs('EPSG:6668')
+        union = data['geometry'].unary_union
         center = union.centroid
         nearest_index = self.s_index.nearest(center)[1]
         epsg_num = self.flat_file.loc[nearest_index[0], 'EPSGコード']

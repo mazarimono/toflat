@@ -1,1 +1,2 @@
-# toflat
+# toflat: Japanese latlong to xy.
+
