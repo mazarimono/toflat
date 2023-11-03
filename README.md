@@ -19,6 +19,8 @@ pip install toflat
 ```python
 
 from toflat import toflat
+import geopandas as gpd
+
 data = {
     'name': ['Kyoto Station', 'Kinkaku temple', 'MK bowl', 'Ginaku_temple'],
     'geometry': [point1, point2, point3, point4]
