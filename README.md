@@ -20,6 +20,12 @@ pip install toflat
 
 from toflat import toflat
 import geopandas as gpd
+from shapely.geometry import Point
+
+point1 = Point(135.758, 34.985)
+point2 = Point(135.729, 35.039)
+point3 = Point(135.746, 35.066)
+point4 = Point(135.798, 35.027)
 
 data = {
     'name': ['Kyoto Station', 'Kinkaku temple', 'MK bowl', 'Ginaku_temple'],
